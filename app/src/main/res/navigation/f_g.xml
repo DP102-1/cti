@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/f_g"
+    app:startDestination="@id/login">
+
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.cti.login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_cti"
+            app:destination="@id/cti" />
+        <action
+            android:id="@+id/action_login_to_adduser"
+            app:destination="@id/adduser" />
+        <action
+            android:id="@+id/action_login_to_forgetpassword"
+            app:destination="@id/forgetpassword" />
+    </fragment>
+    <fragment
+        android:id="@+id/cti"
+        android:name="com.example.cti.cti"
+        android:label="fragment_cti"
+        tools:layout="@layout/fragment_cti" />
+    <fragment
+        android:id="@+id/adduser"
+        android:name="com.example.cti.assuser"
+        android:label="fragment_assuser"
+        tools:layout="@layout/fragment_assuser" />
+    <fragment
+        android:id="@+id/forgetpassword"
+        android:name="com.example.cti.forgetpassword"
+        android:label="fragment_forgetpassword"
+        tools:layout="@layout/fragment_forgetpassword" />
+</navigation>
